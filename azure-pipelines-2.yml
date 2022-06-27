@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: '8f37cd15-d657-445a-af08-ff183f43c299'
 
   # Web app name
-  webAppName: 'igcv-ci'
+  webAppName: 'igcv-py-app'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'igcv-ci'
+  environmentName: 'igcv-py-app'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : igcv-ci'
+            displayName: 'Deploy Azure Web App : igcv-py-app'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
