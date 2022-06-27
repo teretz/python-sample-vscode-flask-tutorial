@@ -8,16 +8,16 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: 'ff197e08-d581-4830-96ca-f5ab148d6297'
+  azureServiceConnectionId: '7dcbd6f1-4da1-4f69-b351-749b1de8f7b6'
 
   # Web app name
-  webAppName: 'teretz-flask-py-pipeline'
+  webAppName: 'msdocs-python-webapp-quickstart-zaz'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'teretz-flask-py-pipeline'
+  environmentName: 'msdocs-python-webapp-quickstart-zaz'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : teretz-flask-py-pipeline'
+            displayName: 'Deploy Azure Web App : msdocs-python-webapp-quickstart-zaz'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
