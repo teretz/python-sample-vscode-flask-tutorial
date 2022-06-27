@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: '4fcad720-ff05-4c8d-a681-07e1b257356f'
+  azureServiceConnectionId: 'ff197e08-d581-4830-96ca-f5ab148d6297'
 
   # Web app name
   webAppName: 'teretz-flask-py-pipeline'
@@ -79,7 +79,7 @@ stages:
               versionSpec: '$(pythonVersion)'
             displayName: 'Use Python version'
 
-           - task: AzureWebApp@1
+          - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : teretz-flask-py-pipeline'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
